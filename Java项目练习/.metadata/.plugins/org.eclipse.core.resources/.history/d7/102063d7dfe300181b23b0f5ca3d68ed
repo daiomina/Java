@@ -1,0 +1,46 @@
+package com.calc;
+
+import java.awt.GridLayout;
+
+import javax.swing.Button;
+import javax.swing.Frame;
+import javax.swing.Panel;
+import javax.swing.TextField;
+
+public class Test {
+	String result = "result...";
+	//添加一个窗体 f
+	Frame f = new Frame("计算器");
+	f.setVisible(true);//设窗体是否可见(面板)
+	//创建一个文本域。可以显示20列
+	TextField result_TextField = new TextField(result, 20);
+	//添加一个容器 p
+	Panel pan = new Panel();
+	f.add(pan);
+	//网格布局GridLayout()4行4列，水平和垂直间距都为5px
+	GridLayout grid = new GridLayout(4,4,5,5)
+	//设置容器布局(setLayout方法) ，
+	pan.setLayout(grid);
+	//创建按钮 数字0-9
+	JButton button0 = new JButton("0");
+	JButton button1 = new JButton("1");
+	JButton button2 = new JButton("2");
+	JButton button3 = new JButton("3");
+	JButton button4 = new JButton("4");
+	JButton button5 = new JButton("5");
+	JButton button6 = new JButton("6");
+	JButton button7 = new JButton("7");
+	JButton button8 = new JButton("8");
+	JButton button9 = new JButton("9");
+	
+	//创建计算命令按钮，加减乘除、小数点、等于、退格
+	JButton button_jia = new JButton("+");
+	JButton button_jian = new JButton("-");
+	JButton button_cheng = new JButton("*");
+	JButton button_chu = new JButton("/");
+	JButton button_dian = new JButton(".");
+	JButton button_dy = new JButton("=");
+	JButton button_clear = new JButton("Clear");
+
+	
+}

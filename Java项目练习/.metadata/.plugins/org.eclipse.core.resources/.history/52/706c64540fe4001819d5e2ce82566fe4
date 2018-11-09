@@ -1,0 +1,88 @@
+package com.calc;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Test {
+	public static void main(String[] args) {
+		String result = "result...";
+		//添加一个窗体 f
+		JFrame f = new JFrame("计算器");
+		f.setSize(400, 600);
+		f.setVisible(true);
+		//创建一个文本域。可以显示20列
+		JTextField result_TextField = new JTextField(result, 20);
+		
+		//添加一个容器 p1
+		JPanel p1 = new JPanel();
+		//网格布局GridLayout()4行4列，水平和垂直间距都为5px
+		//设置容器布局(setLayout方法) ，
+		p1.setLayout(new GridLayout(4,4,5,5));
+		//设置p1对象的边距
+		p1.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+		p1.setSize(300,500);
+		
+		//添加一个容器 p2
+		JPanel p2 = new JPanel();
+		p2.setLayout(new BorderLayout());
+		
+		JPanel p = new JPanel();
+		p.setLayout(new BorderLayout());
+		p2.setSize(100, 80);
+
+
+		
+		//创建按钮 数字0-9
+		JButton button0 = new JButton("0");
+		JButton button1 = new JButton("1");
+		JButton button2 = new JButton("2");
+		JButton button3 = new JButton("3");
+		JButton button4 = new JButton("4");
+		JButton button5 = new JButton("5");
+		JButton button6 = new JButton("6");
+		JButton button7 = new JButton("7");
+		JButton button8 = new JButton("8");
+		JButton button9 = new JButton("9");
+		
+		//创建计算命令按钮，加减乘除、小数点、等于、退格
+		JButton button_jia = new JButton("+");
+		JButton button_jian = new JButton("-");
+		JButton button_cheng = new JButton("*");
+		JButton button_chu = new JButton("/");
+		JButton button_dian = new JButton(".");
+		JButton button_dy = new JButton("=");
+		JButton button_clear = new JButton("Clear");
+		
+		
+		f.add(p);
+		p.add(p1, BorderLayout.SOUTH);
+		p.add(p2, BorderLayout.NORTH);
+		p1.add(button7);
+		p1.add(button8);
+		p1.add(button9);
+		p1.add(button_chu);
+		p1.add(button4);
+		p1.add(button5);
+		p1.add(button6);
+		p1.add(button_cheng);
+		p1.add(button1);
+		p1.add(button2);
+		p1.add(button3);
+		p1.add(button_jian);
+		p1.add(button_dian);
+		p1.add(button0);
+		p1.add(button_dy);
+		p1.add(button_jia);
+		p2.add(result_TextField, BorderLayout.WEST);
+		p2.add(button_clear, BorderLayout.EAST);
+		
+		//添加按钮的监听事件
+		button0.addActionListener();
+	}	
+}
